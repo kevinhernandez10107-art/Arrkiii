@@ -30,7 +30,4 @@ const { ClusterManager } = require("discord-hybrid-sharding");
       console.log(`Launched cluster ${cluster.id}`);
     })
     .on("debug", (info) => {
-      console.log(`${info}`, "cluster");
-    })
-    .spawn({ timeout: -1 });
-});
+      console.log(`${info}`, "
