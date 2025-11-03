@@ -53,30 +53,7 @@ const shoukaku = new Shoukaku(new Shoukaku.Client(), nodes);
 const kazagumo = new Kazagumo({ plugins: [], defaultSearchEngine: 'youtube' }, shoukaku);
 
 # Example Canvas Welcome Banner
-const { createCanvas, loadImage } = require('canvas');
-async function welcomeBanner(user) {
-  const canvas = createCanvas(800, 250);
-  const ctx = canvas.getContext('2d');
-  ctx.fillStyle = '#23272A';
-  ctx.fillRect(0, 0, 800, 250);
-  const avatar = await loadImage(user.displayAvatarURL({ extension: 'jpg' }));
-  ctx.drawImage(avatar, 25, 25, 200, 200);
-  ctx.font = 'bold 40px Sans';
-  ctx.fillStyle = '#fff';
-  ctx.fillText(`Welcome, ${user.username}!`, 250, 120);
-  return canvas.toBuffer();
-}
-
-# Example Anti-Nuke
-client.on('guildMemberRemove', async (member) => {
-  // Detect mass kicks/bans and take action
-});
-
-# Example Auto-Responder
-const triggers = [{ phrase: 'hello', response: 'Hi there!' }];
-client.on('messageCreate', msg => {
-  const trig = triggers.find(t => msg.content.toLowerCase().includes(t.phrase));
-  if (trig) msg.reply(trig.response);
+const (trig) msg.reply(trig.response);
 });
 
 # Installation
@@ -106,4 +83,4 @@ node Shard.js
 - Node.js v20+
 - Lavalink server for music features
 
-# Enjoy a premium, Arrkiii experience!
+# Enjoy a premium, Arrkiii 
